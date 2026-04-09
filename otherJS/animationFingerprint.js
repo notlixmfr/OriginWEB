@@ -6,7 +6,7 @@ const animationFP_time = {
     coloros_2: 25,
     begonia: 13,
     duckweed: 13,
-    fountain: 35,
+    fountain: 25,
     fusion: 30,
     gala: 30,
     phantom: 30,
