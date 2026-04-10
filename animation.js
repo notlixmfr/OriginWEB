@@ -179,8 +179,8 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
     const iconEl = currentOpeningEl;
     const appDisplay = getAppDisplay(appEl);
 
-    appEl.style.transition = ``;
-    appEl.style.transform = ``;
+    // Keep current transform during close animation to prevent jump
+    appEl.style.transition = `all ${config.timeHidingIconAppTmp}s ${config.cubic_allParam}`;
 
     currentOpeningElApp = null;
     currentOpeningEl = null;
@@ -195,6 +195,8 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
         appDisplay.style.display = ``;
         hideIcon(iconEl, false);
         appEl.style.opacity = ``;
+        appEl.style.transform = ``;
+        appEl.style.transition = ``;
         timeOutClosingApp[appEl.id] = null;
         setScrollPointerEvents(true);
         runCloseScript(appEl.id);
