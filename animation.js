@@ -10,15 +10,42 @@ const APP_DISPLAY_SELECTOR = ".appDisplay";
 const OPEN_CLASS = "open";
 const HIDDEN_CLASS = "hidden";
 
-const OPEN_POINTER_DELAY = 200;
-const CLOSE_DELAY_DEFAULT = 700;
-const CLOSE_DELAY_SCRIPT = 800;
-const CLOSE_TO_CENTER_DURATION = 400;
-const OPEN_SWITCH_DURATION = 400;
-const OPEN_ISLAND_DURATION = 650;
-const OPEN_ISLAND_TIMEOUT = 650;
-const OPEN_CAMERA_DURATION = 650;
-const OPEN_CAMERA_TIMEOUT = 650;
+// XOS 15 Animation Configuration
+const config = {
+  time_allTmp: 0.45,
+  valScaleApp: 90,
+  valScaleWallpaper: 120,
+  cubic_ratioParam: "cubic-bezier(0.23,0.53,0.49,0.78)",
+  cubic_allParam: "cubic-bezier(0.35,0.52,0.53,0.71)",
+  timeHidingIconAppTmp: 0.31,
+  delayHidingIconAppTmp: 0,
+  positionIconOpening: "top",
+  sizeIconOpening: "100%",
+  valTimeTransform: 0.65,
+  valDampingTransform: 0,
+  timeScale: 0.6,
+  valDampingScale: 0.03,
+  valEasing: 0.25,
+  timeShowingIconAppTmp: 0.60,
+  delayShowingIconAppTmp: 0.05,
+  sensitivityNavBarValue: 0.20,
+  maxDragNavValue: 180.42,
+  easingForUnlockAnimation: 0.25,
+  speedForUnlockAnimation: 0.6,
+  animationGroupForUnlockAnimation: 1,
+  animationForUnlockAnimation: 1,
+};
+
+// Updated constants based on XOS 15 config
+const OPEN_POINTER_DELAY = config.timeShowingIconAppTmp * 1000;
+const CLOSE_DELAY_DEFAULT = config.timeHidingIconAppTmp * 1000 + 400;
+const CLOSE_DELAY_SCRIPT = config.timeHidingIconAppTmp * 1000 + 500;
+const CLOSE_TO_CENTER_DURATION = config.valTimeTransform * 1000;
+const OPEN_SWITCH_DURATION = config.time_allTmp * 1000;
+const OPEN_ISLAND_DURATION = config.timeScale * 1000;
+const OPEN_ISLAND_TIMEOUT = config.timeScale * 1000;
+const OPEN_CAMERA_DURATION = config.timeScale * 1000;
+const OPEN_CAMERA_TIMEOUT = config.timeScale * 1000;
 
 const MAX_PULL_Y = 140;
 const SCALE_DIVISOR = 280;
@@ -130,7 +157,7 @@ function openApp(el) {
     runOpenScript(currentOpeningEl.dataset.app);
 }
 
-let scaleAllAppReverse = 1 / 0.86;
+let scaleAllAppReverse = 1 / (config.valScaleApp / 100);
 function closeApp() {
     const didClose = doCloseApp({
         delayMs: closeDelay * speed,
@@ -299,7 +326,7 @@ function updateTransform(y, x, d = "0.1") {
 }
 
 function resetpop() {
-    currentOpeningElApp.style.transition = `all 0.4s`;
+    currentOpeningElApp.style.transition = `all ${config.timeScale}s ${config.cubic_allParam}`;
     currentOpeningElApp.style.transform = ``;
 }
 
