@@ -38,8 +38,8 @@ const config = {
 
 // Updated constants based on XOS 15 config
 const OPEN_POINTER_DELAY = config.timeShowingIconAppTmp * 1000;
-const CLOSE_DELAY_DEFAULT = config.timeHidingIconAppTmp * 1000 + 400;
-const CLOSE_DELAY_SCRIPT = config.timeHidingIconAppTmp * 1000 + 500;
+const CLOSE_DELAY_DEFAULT = config.timeHidingIconAppTmp * 1000;
+const CLOSE_DELAY_SCRIPT = config.timeHidingIconAppTmp * 1000 + 100;
 const CLOSE_TO_CENTER_DURATION = config.valTimeTransform * 1000;
 const OPEN_SWITCH_DURATION = config.time_allTmp * 1000;
 const OPEN_ISLAND_DURATION = config.timeScale * 1000;
