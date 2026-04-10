@@ -17,7 +17,7 @@ const config = {
   valScaleWallpaper: 129,
   cubic_ratioParam: "cubic-bezier(0.09,0.72,0.58,0.57)",
   cubic_allParam: "cubic-bezier(0.11,0.51,0.50,0.76)",
-  timeHidingIconAppTmp: 0.40,
+  timeHidingIconAppTmp: 0,
   delayHidingIconAppTmp: 0,
   positionIconOpening: "center",
   sizeIconOpening: "110%",
