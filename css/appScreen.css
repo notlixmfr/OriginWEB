@@ -545,14 +545,14 @@
         bottom calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
         right calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
         left calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        translate calc(0.65s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
+        translate calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
         width calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
         height calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
         transform calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        rotate calc(0.4s * var(--bg-speedAnimation)) calc(0.1s * var(--bg-speedAnimation)),
-        z-index calc(0.3s * var(--bg-speedAnimation)), opacity 0s calc(0.31s * var(--bg-speedAnimation)),
-        scale calc(0.4s * var(--bg-speedAnimation)),
-        border-radius calc(0.2s * var(--bg-speedAnimation)) calc(0.1s * var(--bg-speedAnimation));
+        rotate calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
+        z-index calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
+        opacity calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
+        scale calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier);
     /*rotate: x 180deg;*/
     will-change: transform, border-radius, width, height, top, bottom, right, left, z-index, opacity;
 }
