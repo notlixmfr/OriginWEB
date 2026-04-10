@@ -193,8 +193,10 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
         if (blurAllApp && !currentOpeningElApp) {
             blurAllApp.style.opacity = "0";
             blurAllApp.style.background = "transparent";
+            blurAllApp.style.visibility = "hidden";
+            blurAllApp.style.pointerEvents = "none";
         }
-    }, 50);
+    }, 30);
 
     clearTimer(timeOutOpeningApp, appEl.id);
 
