@@ -76,9 +76,9 @@
     --bg-opacityLockClock: 30%;
 }
 :root {
-    /*animation - Magic OS Configuration*/
-    --animOpeningApp-cubicBezier: cubic-bezier(1.00,1.00,0.00,0.00);
-    --animClosingApp-cubicBezier: cubic-bezier(1.00,1.00,0.00,0.00);
+    /*animation - Updated Configuration*/
+    --animOpeningApp-cubicBezier: cubic-bezier(0.09,0.72,0.58,0.57);
+    --animClosingApp-cubicBezier: cubic-bezier(0.11,0.51,0.50,0.76);
 }
 
 :root {
