@@ -33,7 +33,7 @@ const animationFP_total = {
     coloros_2: 60,
     begonia: 58,
     duckweed: 58,
-    fountain: 26,
+    fountain: 30,
     fusion: 30,
     gala: 30,
     phantom: 30,
