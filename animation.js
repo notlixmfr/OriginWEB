@@ -10,33 +10,33 @@ const APP_DISPLAY_SELECTOR = ".appDisplay";
 const OPEN_CLASS = "open";
 const HIDDEN_CLASS = "hidden";
 
-// XOS 15 Animation Configuration
+// Magic OS Animation Configuration
 const config = {
-  time_allTmp: 0.45,
-  valScaleApp: 90,
-  valScaleWallpaper: 120,
-  cubic_ratioParam: "cubic-bezier(0.23,0.53,0.49,0.78)",
-  cubic_allParam: "cubic-bezier(0.35,0.52,0.53,0.71)",
-  timeHidingIconAppTmp: 0.31,
+  time_allTmp: 0.5,
+  valScaleApp: 86,
+  valScaleWallpaper: 110,
+  cubic_ratioParam: "cubic-bezier(1.00,1.00,0.00,0.00)",
+  cubic_allParam: "cubic-bezier(1.00,1.00,0.00,0.00)",
+  timeHidingIconAppTmp: 0.3,
   delayHidingIconAppTmp: 0,
-  positionIconOpening: "top",
-  sizeIconOpening: "100%",
-  valTimeTransform: 0.65,
-  valDampingTransform: 0,
-  timeScale: 0.6,
-  valDampingScale: 0.03,
+  positionIconOpening: "center",
+  sizeIconOpening: "110%",
+  valTimeTransform: 0.5,
+  valDampingTransform: 0.07,
+  timeScale: 0.5,
+  valDampingScale: 0,
   valEasing: 0.25,
-  timeShowingIconAppTmp: 0.60,
+  timeShowingIconAppTmp: 0.3,
   delayShowingIconAppTmp: 0.05,
-  sensitivityNavBarValue: 0.20,
-  maxDragNavValue: 180.42,
+  sensitivityNavBarValue: 0.08,
+  maxDragNavValue: 150,
   easingForUnlockAnimation: 0.25,
   speedForUnlockAnimation: 0.6,
   animationGroupForUnlockAnimation: 1,
   animationForUnlockAnimation: 1,
 };
 
-// Updated constants based on XOS 15 config
+// Updated constants based on Magic OS config
 const OPEN_POINTER_DELAY = config.timeShowingIconAppTmp * 1000;
 const CLOSE_DELAY_DEFAULT = config.timeHidingIconAppTmp * 1000;
 const CLOSE_DELAY_SCRIPT = config.timeHidingIconAppTmp * 1000 + 100;
