@@ -6,7 +6,7 @@ const animationFP_time = {
     coloros_2: 25,
     begonia: 13,
     duckweed: 13,
-    fountain: 25,
+    fountain: 30,
     fusion: 30,
     gala: 30,
     phantom: 30,
@@ -33,7 +33,7 @@ const animationFP_total = {
     coloros_2: 60,
     begonia: 58,
     duckweed: 58,
-    fountain: 17,
+    fountain: 26,
     fusion: 30,
     gala: 30,
     phantom: 30,
@@ -67,13 +67,13 @@ async function loadFpAnim(onSuccess = function () {}) {
     await preload(
         `/OriginWEB/originData/animationFingerprint/${ani_fadein_fingerprint_type}`,
         "kgd_osfingerprint_fadein",
-        24,
+        30,
         KGD_CACHE.fadein
     );
     await preload(
         `/OriginWEB/originData/animationFingerprint/${ani_fadeout_fingerprint_type}`,
         "kgd_osfingerprint_fadeout",
-        23,
+        30,
         KGD_CACHE.fadeout
     );
     onSuccess();
