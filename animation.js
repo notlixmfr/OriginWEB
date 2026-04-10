@@ -179,19 +179,30 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
     const iconEl = currentOpeningEl;
     const appDisplay = getAppDisplay(appEl);
 
-    // Keep current transform during close animation to prevent jump
-    appEl.style.transition = `all ${config.timeHidingIconAppTmp}s ${config.cubic_allParam}`;
-
+    // Disable CSS transitions and force animation via JavaScript
     currentOpeningElApp = null;
     currentOpeningEl = null;
 
+    // Disable all CSS transitions immediately
+    appEl.style.transition = 'none !important';
+
+    // Remove open class
     setOpenClasses(appEl, false);
 
     clearTimer(timeOutOpeningApp, appEl.id);
 
     appEl.style.pointerEvents = ``;
 
-    timeOutClosingApp[appEl.id] = setTimeout(() => {
+    // Force the close animation with JavaScript to prevent disappearing
+    appEl.animate([
+        { transform: getComputedStyle(appEl).transform },
+        { opacity: 1 },
+        { transform: 'translateY(100px) scale(0.8)', opacity: 0 }
+    ], {
+        duration: delayMs,
+        easing: config.cubic_allParam,
+        fill: 'forwards'
+    }).onfinish = () => {
         appDisplay.style.display = ``;
         hideIcon(iconEl, false);
         appEl.style.opacity = ``;
@@ -200,7 +211,7 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
         timeOutClosingApp[appEl.id] = null;
         setScrollPointerEvents(true);
         runCloseScript(appEl.id);
-    }, delayMs);
+    };
 
     if (afterClose) afterClose();
 
