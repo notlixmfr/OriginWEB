@@ -186,6 +186,15 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
     currentOpeningEl = null;
 
     setOpenClasses(appEl, false);
+    
+    // Force blurAllApp to reset properly
+    setTimeout(() => {
+        const blurAllApp = document.getElementById("blurAllApp");
+        if (blurAllApp && !currentOpeningElApp) {
+            blurAllApp.style.opacity = "0";
+            blurAllApp.style.background = "transparent";
+        }
+    }, 50);
 
     clearTimer(timeOutOpeningApp, appEl.id);
 
