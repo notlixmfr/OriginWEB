@@ -75,6 +75,11 @@
     --bg-fontWeightLockClock: 500;
     --bg-opacityLockClock: 30%;
 }
+:root {
+    /*animation*/
+    --animOpeningApp-cubicBezier: cubic-bezier(0.15, 0.1, 0.15, 1);
+    --animClosingApp-cubicBezier: cubic-bezier(0.35, 1.1, 0.33, 1);
+}
 
 :root {
     --icon-scaleBPS: 1;

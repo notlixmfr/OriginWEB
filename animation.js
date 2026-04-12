@@ -10,15 +10,15 @@ const APP_DISPLAY_SELECTOR = ".appDisplay";
 const OPEN_CLASS = "open";
 const HIDDEN_CLASS = "hidden";
 
-const OPEN_POINTER_DELAY = 600;
-const CLOSE_DELAY_DEFAULT = 710;
-const CLOSE_DELAY_SCRIPT = 810;
-const CLOSE_TO_CENTER_DURATION = 650;
-const OPEN_SWITCH_DURATION = 450;
-const OPEN_ISLAND_DURATION = 600;
-const OPEN_ISLAND_TIMEOUT = 600;
-const OPEN_CAMERA_DURATION = 600;
-const OPEN_CAMERA_TIMEOUT = 600;
+const OPEN_POINTER_DELAY = 200;
+const CLOSE_DELAY_DEFAULT = 700;
+const CLOSE_DELAY_SCRIPT = 800;
+const CLOSE_TO_CENTER_DURATION = 400;
+const OPEN_SWITCH_DURATION = 400;
+const OPEN_ISLAND_DURATION = 650;
+const OPEN_ISLAND_TIMEOUT = 650;
+const OPEN_CAMERA_DURATION = 650;
+const OPEN_CAMERA_TIMEOUT = 650;
 
 const MAX_PULL_Y = 140;
 const SCALE_DIVISOR = 280;
@@ -130,7 +130,7 @@ function openApp(el) {
     runOpenScript(currentOpeningEl.dataset.app);
 }
 
-let scaleAllAppReverse = 1 / (config.valScaleApp / 100);
+let scaleAllAppReverse = 1 / 0.86;
 function closeApp() {
     const didClose = doCloseApp({
         delayMs: closeDelay * speed,
@@ -159,17 +159,6 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
     currentOpeningEl = null;
 
     setOpenClasses(appEl, false);
-    
-    // Force blurAllApp to reset properly
-    setTimeout(() => {
-        const blurAllApp = document.getElementById("blurAllApp");
-        if (blurAllApp && !currentOpeningElApp) {
-            blurAllApp.style.opacity = "0";
-            blurAllApp.style.background = "transparent";
-            blurAllApp.style.visibility = "hidden";
-            blurAllApp.style.pointerEvents = "none";
-        }
-    }, 30);
 
     clearTimer(timeOutOpeningApp, appEl.id);
 
@@ -310,7 +299,7 @@ function updateTransform(y, x, d = "0.1") {
 }
 
 function resetpop() {
-    currentOpeningElApp.style.transition = `all ${config.timeScale}s ${config.cubic_allParam}`;
+    currentOpeningElApp.style.transition = `all 0.4s`;
     currentOpeningElApp.style.transform = ``;
 }
 
