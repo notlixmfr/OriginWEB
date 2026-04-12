@@ -10,42 +10,15 @@ const APP_DISPLAY_SELECTOR = ".appDisplay";
 const OPEN_CLASS = "open";
 const HIDDEN_CLASS = "hidden";
 
-// Updated Animation Configuration
-const config = {
-  time_allTmp: 0.43,
-  valScaleApp: 92,
-  valScaleWallpaper: 129,
-  cubic_ratioParam: "cubic-bezier(0.09,0.72,0.58,0.57)",
-  cubic_allParam: "cubic-bezier(0.11,0.51,0.50,0.76)",
-  timeHidingIconAppTmp: 0.4,
-  delayHidingIconAppTmp: 0.2,
-  positionIconOpening: "center",
-  sizeIconOpening: "110%",
-  valTimeTransform: 0.6,
-  valDampingTransform: 0.05,
-  timeScale: 0.7,
-  valDampingScale: 0.17,
-  valEasing: 0.00,
-  timeShowingIconAppTmp: 0.26,
-  delayShowingIconAppTmp: 0,
-  sensitivityNavBarValue: 0.17,
-  maxDragNavValue: 260,
-  easingForUnlockAnimation: 0.25,
-  speedForUnlockAnimation: 0.6,
-  animationGroupForUnlockAnimation: 1,
-  animationForUnlockAnimation: 1,
-};
-
-// Updated constants based on new configuration
-const OPEN_POINTER_DELAY = config.timeShowingIconAppTmp * 1000;
-const CLOSE_DELAY_DEFAULT = config.timeHidingIconAppTmp * 1000;
-const CLOSE_DELAY_SCRIPT = config.timeHidingIconAppTmp * 1000 + 100;
-const CLOSE_TO_CENTER_DURATION = config.valTimeTransform * 1000;
-const OPEN_SWITCH_DURATION = config.time_allTmp * 1000;
-const OPEN_ISLAND_DURATION = config.timeScale * 1000;
-const OPEN_ISLAND_TIMEOUT = config.timeScale * 1000;
-const OPEN_CAMERA_DURATION = config.timeScale * 1000;
-const OPEN_CAMERA_TIMEOUT = config.timeScale * 1000;
+const OPEN_POINTER_DELAY = 600;
+const CLOSE_DELAY_DEFAULT = 710;
+const CLOSE_DELAY_SCRIPT = 810;
+const CLOSE_TO_CENTER_DURATION = 650;
+const OPEN_SWITCH_DURATION = 450;
+const OPEN_ISLAND_DURATION = 600;
+const OPEN_ISLAND_TIMEOUT = 600;
+const OPEN_CAMERA_DURATION = 600;
+const OPEN_CAMERA_TIMEOUT = 600;
 
 const MAX_PULL_Y = 140;
 const SCALE_DIVISOR = 280;
