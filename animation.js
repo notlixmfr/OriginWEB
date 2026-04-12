@@ -152,6 +152,9 @@ function doCloseApp({delayMs, shouldCloseToCenter, afterClose}) {
     const iconEl = currentOpeningEl;
     const appDisplay = getAppDisplay(appEl);
 
+    appEl.style.transition = ``;
+    appEl.style.transform = ``;
+
     currentOpeningElApp = null;
     currentOpeningEl = null;
 

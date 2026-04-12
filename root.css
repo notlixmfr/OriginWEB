@@ -70,7 +70,7 @@
     /*lock clock edit*/
     --bg-lockClockTranslate: "";
     --bg-colorLockClock: #ffffff;
-    --bg-fontLockClock: "Roboto Flex", sans-serif;
+    --bg-fontLockClock: "Space Grotesk", sans-serif;
     --bg-scaleLockContent: 1;
     --bg-fontWeightLockClock: 500;
     --bg-opacityLockClock: 30%;

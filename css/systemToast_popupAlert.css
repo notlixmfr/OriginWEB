@@ -37,7 +37,7 @@
 .popup-message_alert {
     font-size: 12px;
     margin-bottom: 15px;
-    font-family: "Noto sans", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: bold;
 }
 
@@ -52,7 +52,7 @@
     cursor: pointer;
     width: 100%;
     transition: opacity calc(0.2s * var(--bg-speedAnimation));
-    font-family: "Noto sans", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     font-weight: bold;
     color: var(--bg-color);
 }
@@ -87,7 +87,7 @@
     background: transparent;
     font-size: 15px;
     font-weight: bold;
-    font-family: "Noto sans", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     color: gray;
     text-align: left;
     pointer-events: none;
@@ -115,7 +115,7 @@
     z-index: 10012310;
     opacity: 0;
     pointer-events: none;
-    font-family: "Noto sans", sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     text-align: center;
     max-width: none;
     transition: all calc(0.4s * var(--bg-speedAnimation)), transform 0s ease calc(0.4s * var(--bg-speedAnimation)),
