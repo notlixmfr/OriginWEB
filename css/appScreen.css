@@ -540,19 +540,7 @@
 
     border-radius: calc(var(--bg-borderRadiusIcon) * var(--s));
 
-    transition: all calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        border-radius calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        bottom calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        right calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        left calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        translate calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        width calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        height calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        transform calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        rotate calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        z-index calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        opacity calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier),
-        scale calc(0.31s * var(--bg-speedAnimation)) var(--animClosingApp-cubicBezier);
+    transition: all 0.31s var(--animClosingApp-cubicBezier);
     /*rotate: x 180deg;*/
     will-change: transform, border-radius, width, height, top, bottom, right, left, z-index, opacity;
 }
