@@ -45,8 +45,8 @@ window.addEventListener("DOMContentLoaded", async () => {
     }
 
     document.getElementById("rightBigTextNameDeviceInAbout").textContent =
-        localStorage.getItem("rightBigTextNameDeviceInAbout") || "Click to rename";
-    document.getElementById("phoneName").textContent = localStorage.getItem("phoneName") || "Click to rename";
+        localStorage.getItem("rightBigTextNameDeviceInAbout") || "Redmi K90";
+    document.getElementById("phoneName").textContent = localStorage.getItem("phoneName") || "Redmi K90";
 
 
     if ("hardwareConcurrency" in navigator) {
